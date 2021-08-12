@@ -1,0 +1,203 @@
+
+.main{
+    &__component{
+        display: flex;
+       // justify-content: center;
+        margin: 20px;
+        
+         }
+}
+
+.select{
+  flex: 0 0 300px;
+ }
+
+ .uploadFile{
+   margin-top: 50px;
+   &-status{
+     color:green;
+   }
+ }
+
+ .welcome-Dialog{
+  margin-top: 50px;
+  &-status{
+    color:green;
+  }
+ }
+
+.chat{
+    &__component{
+        width:500px;
+        height:700px;
+        border-radius: 10px;
+        background-color:red;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &-top{
+        background-color: rgb(224, 216, 216);
+        border-top-right-radius: 9.3px;
+        border-top-left-radius:9.3px;
+        width: 100%;
+        height: 40px;
+        &__heading{
+            color: blue;
+            font-size: 20px;
+            font-weight:600;
+            padding: 10px;
+        }
+    }
+    
+    &-content{
+        background-color: yellow;
+      //  flex: 0 0 610px;
+        height:610px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+        justify-content:flex-start;
+        overflow: auto;
+        &::-webkit-scrollbar {
+           display: none;
+      }
+
+      & > :first-child { margin-top: auto }
+    
+      
+        
+
+        &-send{
+          color: red;
+          align-self: flex-end;
+          margin:10px 0 ;
+          font-size: 20px;
+          display: block;
+          background-color: black;
+          white-space: pre-line;
+          padding: 5px 10px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+
+        &-receive{
+          color: white;
+          align-self: flex-start;
+          margin:10px 0 ;
+          font-size: 20px;
+          display: block;
+          background-color: blue;
+          padding: 5px 10px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          }
+    }
+    &-typeArea{
+      
+       height: 50px;
+       width:100%;
+       border-bottom-right-radius: 9.3px;
+       border-bottom-left-radius:9.3px;
+       align-self: flex-end;
+
+
+       &__textbox{
+           width: 100%;
+           height: 90%;
+           
+           overflow: hidden;
+           display: flex;
+           justify-content: center;
+
+           &-input{
+               width: 80%;
+               height: 90%;       
+               font-size: 17px;
+               margin-top: 5px;
+               &:focus {
+                outline: none;
+            }            
+               
+           }
+
+           &-button{
+            height: 90%;  
+            margin-top: 5px;
+            margin-left: 5px ;
+            color: red;
+            font-size: 15px;
+            font-weight: 500;
+
+        }
+
+       }
+    }
+}
+
+
+
+// .dot-flashing-container{
+//     display: inline-block;
+//     background-color: rgb(76, 76, 238);
+//     padding: 20px;
+//     margin:10px ;
+
+// }
+
+.dot-flashing {
+    position: relative;
+    width: 10px;
+    margin:10px ;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(54, 134, 54);
+    color:rgb(54, 134, 54);
+    animation: dotFlashing 1s infinite linear alternate;
+    animation-delay: .5s;
+  }
+  
+  .dot-flashing::before, .dot-flashing::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot-flashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(54, 134, 54);
+    color: rgb(54, 134, 54);
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  
+  .dot-flashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(54, 134, 54);
+    color: rgb(54, 134, 54);
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dotFlashing {
+    0% {
+      background-color: rgb(54, 134, 54);
+    }
+    50%,
+    100% {
+      background-color:  rgb(162, 247, 162);
+    }
+  }
+  
+
+
+  
+
